@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_send_sms"
+        android:title="@string/enviar_sms"
+        android:icon="@drawable/message_text"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_view_on_map"
+        android:title="@string/ver_no_mapa"
+        android:icon="@drawable/map"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_view_delete"
+        android:title="@string/deletar_contato"
+        android:icon="@drawable/account_remove"
+        app:showAsAction="always"/>
+
+
+</menu>

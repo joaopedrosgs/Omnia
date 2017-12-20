@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Omnia</string>
+    <string name="endereco">Address</string>
+    <string name="info_add">Information</string>
+    <string name="tel">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="nome">Name</string>
+    <string name="salvar">Save</string>
+    <string name="tirar_foto">Take picture</string>
+    <string name="enviar_sms">Send SMS</string>
+    <string name="ver_no_mapa">Go to Map</string>
+    <string name="deletar_contato">Delete Contact</string>
+    <string name="adicionar_contato">Add Contact</string>
+</resources>

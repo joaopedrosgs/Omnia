@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name" translatable="false">Omnia</string>
+    <string name="endereco">Endereço</string>
+    <string name="info_add">Informações adicionais</string>
+    <string name="tel">Telefone</string>
+    <string name="email">Email</string>
+    <string name="pass">Senha</string>
+    <string name="login">Fazer login</string>
+    <string name="username">Usuário</string>
+    <string name="nome">Nome</string>
+    <string name="salvar">Salvar</string>
+    <string name="tirar_foto">Tirar Foto</string>
+    <string name="enviar_sms">Enviar SMS</string>
+    <string name="ver_no_mapa">Ver no mapa</string>
+    <string name="deletar_contato">Deletar contato</string>
+    <string name="adicionar_contato">Adicionar Contato</string>
+</resources>
