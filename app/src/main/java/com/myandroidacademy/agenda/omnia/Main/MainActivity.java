@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         String contatos_string = gson.toJson(contactList);
-        sharedPreferences.edit().putString("contatos", contatos_string).apply(); // Salva o json no shared preferences
+        sharedPreferences.edit().putString("contatos", contatos_string).commit(); // Salva o json no shared preferences
 
     }
 
