@@ -58,7 +58,7 @@
                 android:layout_height="60dp"
                 android:hint="@string/username"
                 android:imeOptions="actionNext"
-                android:inputType="text"
+                android:inputType="textCapSentences"
                 android:lines="1"
                 android:maxLines="1"
                 android:textColor="@color/DarkGray"

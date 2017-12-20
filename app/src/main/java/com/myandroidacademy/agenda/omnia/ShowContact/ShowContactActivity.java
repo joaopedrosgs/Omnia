@@ -3,6 +3,7 @@ package com.myandroidacademy.agenda.omnia.ShowContact;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -78,16 +79,25 @@ public class ShowContactActivity extends AppCompatActivity implements ShowContac
         email.setText(contato.getEmail());
         endereco.setText(contato.getEndereco());
         caminhoFoto = contato.getCaminhoFoto();
+        if(caminhoFoto!=null  && !caminhoFoto.isEmpty())
         exibeFoto();
     }
 
     private void exibeFoto(){
-        Picasso.with(this)
-                .load("file://" + caminhoFoto)
-                .placeholder(this.getDrawable(R.drawable.account))
-                .fit()
-                .centerCrop()
-                .into(foto);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Picasso.with(this)
+                    .load("file://" + caminhoFoto)
+                    .placeholder(this.getDrawable(R.drawable.account))
+                    .fit()
+                    .centerCrop()
+                    .into(foto);
+        } else {
+            Picasso.with(this)
+                    .load("file://" + caminhoFoto)
+                    .fit()
+                    .centerCrop()
+                    .into(foto);
+        }
     }
     public void viewOnMap(){
         final String end = endereco.getText().toString();

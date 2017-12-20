@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
             sharedPreferences = getSharedPreferences(AplicacaoGlobal.NomeDeUsuario, MODE_PRIVATE);
             gson = new Gson();
             mainPresenter = new MainPresenter(this, sharedPreferences);
+            setTitle("Contatos de "+AplicacaoGlobal.NomeDeUsuario);
         }
 
     }
