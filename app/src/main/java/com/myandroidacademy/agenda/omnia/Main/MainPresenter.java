@@ -41,7 +41,7 @@ public class MainPresenter {
             Contato encontrado = (Contato) contatoIterator.next();
             if (Objects.equals(contato, encontrado)) {
                 contatoIterator.remove();
-                if(!encontrado.getCaminhoFoto().isEmpty()) {
+                if(encontrado.getCaminhoFoto()!=null && !encontrado.getCaminhoFoto().isEmpty()) {
                     File foto = new File(encontrado.getCaminhoFoto());
                     if(foto.delete())
                         Log.d("Info", "Foto deletada");

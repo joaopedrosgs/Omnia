@@ -135,6 +135,10 @@ public class AddContactActivity extends AppCompatActivity implements AddContactV
                 .into(foto);
     }
     public void takeAPhoto2(){
+        if(caminhoFoto != null && !caminhoFoto.isEmpty()) {
+            File arquivoFoto = new File(caminhoFoto);
+            arquivoFoto.delete();
+        }
         Intent intentCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         caminhoFoto = getExternalFilesDir(null) + "/" + System.currentTimeMillis() + ".jpg";
         File arquivoFoto = new File(caminhoFoto);
