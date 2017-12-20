@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.myandroidacademy.agenda.omnia.AplicacaoGlobal;
 import com.myandroidacademy.agenda.omnia.Main.MainActivity;
 import com.myandroidacademy.agenda.omnia.R;
 
@@ -23,8 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.text_input_layout_password) TextInputLayout passwordLayout;
     @BindView(R.id.edit_text_username) TextInputEditText usernameText;
     @BindView(R.id.edit_text_password) TextInputEditText passwordText;
-    @BindView(R.id.logo)
-    TextView Logo;
+    @BindView(R.id.logo) TextView Logo;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +66,10 @@ public class LoginActivity extends AppCompatActivity {
                     .repeat(0)
                     .playOn(findViewById(R.id.buttonlogin));
         } else {
+            final AplicacaoGlobal globalVariable = (AplicacaoGlobal) getApplicationContext();
+            globalVariable.NomeDeUsuario = usernameText.getText().toString();
             Intent intentMain = new Intent(LoginActivity.this, MainActivity.class);
+            finish();
             startActivity(intentMain);
         }
     }
@@ -79,10 +82,5 @@ public class LoginActivity extends AppCompatActivity {
                 .playOn(findViewById(R.id.logo));
     }
 
-    @Override
-    protected void onPause(){
-        super.onPause();
-        finish();
-    }
 
 }

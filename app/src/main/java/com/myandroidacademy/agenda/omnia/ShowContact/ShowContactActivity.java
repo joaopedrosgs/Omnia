@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +19,7 @@ import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class ShowContactActivity extends AppCompatActivity implements ShowContactView {
 
@@ -25,6 +28,7 @@ public class ShowContactActivity extends AppCompatActivity implements ShowContac
     @BindView(R.id.contactTelefone) TextView telefone;
     @BindView(R.id.contactEndereco) TextView endereco;
     @BindView(R.id.contactFoto) ImageView foto;
+    boolean MostrandoFoto = false;
 
     public String caminhoFoto;
     ShowContactPresenter showContactPresenter;

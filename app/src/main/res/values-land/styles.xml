@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item> <!-- barra do menu -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item> <!-- barra de tarefas -->
+        <item name="colorAccent">@color/colorAccent</item><!-- checkboxes e textfields, Cor do texto selecionado -->
+        <item name="colorControlNormal">@color/colorAccent</item> <!--campo não selecionado -->
+        <item name="android:textColorPrimary">@color/White</item><!-- cor primaria de texto -->
+        <item name="actionMenuTextColor">@color/White</item>
+    </style>
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item> <!-- barra do menu -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item> <!-- barra de tarefas -->
+        <item name="colorAccent">@color/colorAccent</item><!-- checkboxes e textfields, Cor do texto selecionado -->
+        <item name="colorControlNormal">@color/colorAccent</item> <!--campo não selecionado -->
+        <item name="actionMenuTextColor">@color/White</item>
+
+
+
+    </style>
+
+    <style name="text_label">
+        <item name="android:textColorHint">@color/White</item>
+        <item name="colorAccent">@color/White</item>
+        <item name="colorControlNormal">@color/White</item>
+        <item name="colorControlActivated">@color/White</item>
+    </style>
+    <style name="loginTheme" parent="AppThemeNoActionBar">
+        <item name="android:windowTranslucentStatus" tools:ignore="NewApi">false</item>
+        <item name="android:windowTranslucentNavigation" tools:ignore="NewApi">false</item>
+
+    </style>
+
+</resources>

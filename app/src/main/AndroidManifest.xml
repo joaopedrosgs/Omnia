@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".AplicacaoGlobal"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -22,7 +23,7 @@
                 android:resource="@xml/provider_paths"/>
         </provider>
 
-        <activity android:name="com.myandroidacademy.agenda.omnia.Login.LoginActivity" android:theme="@style/loginTheme" />
+        <activity android:name="com.myandroidacademy.agenda.omnia.Login.LoginActivity" android:theme="@style/loginTheme"  />
         <activity android:name="com.myandroidacademy.agenda.omnia.Main.MainActivity" android:theme="@style/AppTheme" android:label="Contatos"/>
         <activity android:name="com.myandroidacademy.agenda.omnia.AddContact.AddContactActivity" android:theme="@style/AppTheme" android:label="Adicionar" />
         <activity android:name="com.myandroidacademy.agenda.omnia.Splashscreen.SplashscreenActivity" android:theme="@style/AppThemeNoActionBar">

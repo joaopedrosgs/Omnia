@@ -3,29 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
+    android:orientation="horizontal"
+    >
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="6">
+        android:layout_width="200dp"
 
+        android:layout_height="fill_parent">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:contentDescription="Background login"
+            android:src="@drawable/bglogin"
             android:scaleType="centerCrop"
-            android:src="@drawable/bglogin" />
-
+            android:layout_centerInParent="true"
+            android:contentDescription="Background login" />
         <TextView
-            android:id="@+id/logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:id="@+id/logo"
+            android:text="@string/app_name"
             android:shadowColor="@color/Black"
             android:shadowRadius="10"
-            android:text="@string/app_name"
             android:textAllCaps="true"
             android:textColor="@color/White"
             android:textSize="30sp" />
@@ -33,21 +31,26 @@
     </RelativeLayout>
 
 
+
+
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:padding="40dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="80dp"
+        android:paddingTop="40dp"
+
+
 
         >
-
         <android.support.design.widget.TextInputLayout
             android:id="@+id/text_input_layout_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:textColor="@color/DarkGray">
+            android:textColor="@color/DarkGray"
+            >
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/edit_text_username"
@@ -86,14 +89,15 @@
 
         <Button
             android:id="@+id/buttonlogin"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-
+            android:layout_marginTop="50dp"
             android:layout_gravity="bottom|end"
-            android:layout_marginTop="30dp"
+
+
             android:background="@drawable/bg_button"
+            android:padding="20dp"
             android:drawableRight="@drawable/arrow_right"
-            android:padding="20dp" />
+            android:layout_height="65dp"
+            android:layout_width="65dp"/>
 
     </LinearLayout>
 

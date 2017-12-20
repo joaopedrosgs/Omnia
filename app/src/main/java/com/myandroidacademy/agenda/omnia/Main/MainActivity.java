@@ -15,6 +15,7 @@ import android.view.View;
 import com.google.gson.Gson;
 
 import com.myandroidacademy.agenda.omnia.AddContact.AddContactActivity;
+import com.myandroidacademy.agenda.omnia.AplicacaoGlobal;
 import com.myandroidacademy.agenda.omnia.Entities.Contato;
 import com.myandroidacademy.agenda.omnia.R;
 import com.myandroidacademy.agenda.omnia.ShowContact.ShowContactActivity;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
     private MainPresenter mainPresenter;
     private final int CODIGO_NOVO_CONTATO = 123;
     private final int CODIGO_DELETA_CONTATO = 321;
+
     SharedPreferences sharedPreferences;
     Gson gson;
 
@@ -40,10 +42,11 @@ public class MainActivity extends AppCompatActivity implements MainView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        sharedPreferences =  getSharedPreferences("contatos", MODE_PRIVATE);
-        gson = new Gson();
-
-        mainPresenter = new MainPresenter(this, sharedPreferences);
+        if(!AplicacaoGlobal.NomeDeUsuario.isEmpty()) {
+            sharedPreferences = getSharedPreferences(AplicacaoGlobal.NomeDeUsuario, MODE_PRIVATE);
+            gson = new Gson();
+            mainPresenter = new MainPresenter(this, sharedPreferences);
+        }
 
     }
 
@@ -97,7 +100,8 @@ public class MainActivity extends AppCompatActivity implements MainView {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         String contatos_string = gson.toJson(contactList);
-        sharedPreferences.edit().putString("contatos", contatos_string).commit(); // Salva o json no shared preferences
+        if(!AplicacaoGlobal.NomeDeUsuario.isEmpty())
+        sharedPreferences.edit().putString(AplicacaoGlobal.NomeDeUsuario, contatos_string).commit(); // Salva o json no shared preferences
 
     }
 

@@ -5,6 +5,7 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.myandroidacademy.agenda.omnia.AplicacaoGlobal;
 import com.myandroidacademy.agenda.omnia.Entities.Contato;
 
 import java.io.File;
@@ -23,8 +24,8 @@ public class MainPresenter {
     public MainPresenter(MainView mainView, SharedPreferences sharedPreferences) {
         this.mainView = mainView;
         gson = new Gson();
-        if (sharedPreferences.contains("contatos")) {
-            String contatos_json = sharedPreferences.getString("contatos", "[{}]");
+        if (sharedPreferences.contains(AplicacaoGlobal.NomeDeUsuario)) {
+            String contatos_json = sharedPreferences.getString(AplicacaoGlobal.NomeDeUsuario, "[{}]");
             contactList = gson.fromJson(contatos_json, new TypeToken<ArrayList<Contato>>(){}.getType());
             mainView.updateList(contactList);
         }
